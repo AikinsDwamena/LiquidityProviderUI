@@ -1,0 +1,31 @@
+<div class="stock-menu-horizontal">
+  <div class="row">
+    <div class="stock-banner">
+      <div *ngFor="let provider of provider_data" class="col">
+        <label for="{{ provider.name }}_btn">
+          <input
+            type="radio"
+            [checked]="provider.name == selectedStock"
+            (change)="onCheck($event)"
+            name="stockSelectorBtn"
+            value="{{ provider.name }}"
+            id="{{ provider.name }}_btn"
+          />
+          <div class="stock-card">
+            <div class="image-box">
+              <img
+                src="{{ provider.path }}"
+                class="stock-image"
+                alt=""
+                srcset=""
+              />
+            </div>
+            <div class="stock-name">
+              <p>{{ provider.name }}</p>
+            </div>
+          </div>
+        </label>
+      </div>
+    </div>
+  </div>
+</div>

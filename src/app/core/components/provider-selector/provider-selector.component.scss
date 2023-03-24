@@ -1,0 +1,82 @@
+.stock-menu-horizontal {
+    .stock-banner {
+        background: #EDE7FF;
+        color: #000000;
+        box-shadow: 0px 8px 24px rgba(120, 86, 206, 0.2);
+        border-radius: 20px;
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        padding: 5px;
+    }
+
+    .stock-card {
+        background: inherit;
+
+        border-radius: 20px;
+        justify-content: center;
+        text-align: center;
+        padding: 5px;
+        cursor: pointer;
+    }
+
+    .col {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        flex-wrap: nowrap;
+        width: 100%;
+    }
+
+    .row {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding: 5px;
+        flex-wrap: nowrap;
+        width: 100%;
+        height: fit-content;
+    }
+
+    .image-box {
+        justify-content: center;
+        width: 80px;
+        height: 80px;
+        background-blend-mode: color;
+        border-radius: 50%;
+        position: relative;
+        margin: 8px;
+        background-color: #fff
+    }
+
+    .stock-image {
+        top: 25%;
+        left: 25%;
+        width: 50%;
+        position: absolute;
+
+    }
+
+    label {
+        display: block;
+    }
+
+    label input {
+        visibility: hidden;
+        position: absolute;
+        display: none;
+    }
+
+    label input+div {
+        cursor: pointer;
+    }
+
+    label>input:checked+div {
+        background: #FFFFFF;
+        box-shadow: 0px 8px 24px rgba(120, 86, 206, 0.2);
+    }
+
+    .stock-name {
+        font-weight: bolder;
+    }
+}

@@ -1,0 +1,27 @@
+nav {
+    
+    display: flex;
+    justify-content: space-between;
+    background: rgb(56,64,139);
+    background: linear-gradient(90deg, rgba(56,64,139,1) 12%, rgba(214,0,255,0.22452731092436973) 100%);
+
+    a {
+        display: block;
+        padding: 20px;
+        margin: 1.5rem 0;
+        text-decoration: none;
+        color: white;
+        font-weight: 600;
+    }
+
+
+}
+
+
+@media (max-width: 700px) {
+    .sidebar-main {
+        aside {
+            display: none;
+        }
+    }
+}
