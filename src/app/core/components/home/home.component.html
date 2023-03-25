@@ -1,6 +1,16 @@
 <app-sidebar></app-sidebar>
-<div class=".body">
-  <app-provider-selector></app-provider-selector>
-  <!-- //provider detail page 
-  //make order -->
+
+<app-provider-selector
+  [provider_data]="providers"
+  (stockChanged)="setActiveProvider($event)"
+></app-provider-selector>
+<div class="body">
+  <div class="provider-details">
+    <app-provider-details
+      [activeProvider]="activeProvider"
+    ></app-provider-details>
+  </div>
+  <div class="make-order">
+    <app-make-order [currentProvider]="activeProvider"></app-make-order>
+  </div>
 </div>

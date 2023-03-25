@@ -1,1 +1,13 @@
-<p>provider-details works!</p>
+<div class="container">
+  <!-- <h2 class="section-title">{{ activeProvider }}</h2> -->
+  <div class="content">
+    <div class="product-data">
+      <ul>
+        <li *ngFor="let currency of returnCurrencies()">
+          {{ currency.currencyName }}:
+          <span>{{ currency.rate }}</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

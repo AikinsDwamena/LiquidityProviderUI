@@ -1,1 +1,24 @@
-<p>make-order works!</p>
+<div class="table-container">
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Amount</th>
+        <th>Exchange</th>
+        <th>Provider</th>
+        <th>Bank Account</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let order of orders; let i = index" key="{order.orderId}">
+        <td>{{ i }}</td>
+        <td>{{ order.requestAmount }}>/td></td>
+        <td>{{ order.fxName }}</td>
+        <td>{{ order.providerName }}</td>
+        <td>{{ order.tradersBankAccount }}</td>
+        <td>{{ order.requestStatus }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

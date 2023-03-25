@@ -1,5 +1,24 @@
 .body{
-    
+
+    width: 100%;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
     display: flex;
-    grid-template-columns: repeat(1 fr);
+    justify-content: center;
+
+    .provider-details{
+        width: 30%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    .make-order{
+        width: 30%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }

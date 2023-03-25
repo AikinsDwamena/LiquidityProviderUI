@@ -1,0 +1,131 @@
+fieldset {
+    border: 0;
+
+    label {
+        font-weight: bolder;
+        width: 5rem;
+    }
+}
+
+
+.place-order-form {
+    display: inline-block;
+    width: 250px;
+    height: 405px;
+    border: 0.5px solid whitesmoke;
+    border-radius: 20px;
+    margin: 4rem 0;
+    padding: 3rem;
+    box-shadow: 0px 8px 24px rgba(194, 194, 194, 0.49);
+}
+
+.place-order-form,
+.product-names {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+}
+
+.place-order-form {
+    gap: 0.8rem;
+    font-weight: 500;
+}
+
+.stock-field,
+.price-field,
+.quantity-field {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+
+    input {
+        width: 50px;
+        height: 20px;
+        text-align: center;
+    }
+}
+
+.stock-field {
+    select {
+        width: 80px;
+        height: 40px;
+        border: 1px solid white;
+        text-align: center;
+        border-radius: 8px;
+        background-color: violet;
+        font-weight: 500;
+    }
+}
+
+.quantity-field,
+.price-field {
+    input {
+        border: 0px solid grey;
+        border-radius: 8px;
+
+        &::placeholder {
+            font-weight: bolder;
+            color: black;
+        }
+    }
+
+    input:focus-visible {
+        outline: 0px;
+    }
+}
+
+button {
+    height: 40px;
+    width: 100%;
+    align-self: center;
+    background: linear-gradient(90deg, rgba(56,64,139,1) 12%, rgba(214,0,255,0.22452731092436973) 100%);
+    border: 1px solid hsl(257, 40%, 49%);
+    box-shadow: 0px 8px 24px rgba(120, 86, 206, 0.2);
+    border-radius: 6px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.product-data {
+    height: 70%;
+    padding: 2rem;
+    align-items: center;
+
+    ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+
+        span {
+            font-weight: 700;
+        }
+    }
+
+}
+
+.product-img {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+
+    img {
+        height: 40px;
+        width: 40px;
+        margin-left: 1.5rem;
+        object-fit: contain;
+
+    }
+
+}
+
+.form-heading {
+    text-align: center;
+    font-size: 18px;
+}

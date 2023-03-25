@@ -5,7 +5,7 @@
         <label for="{{ provider.name }}_btn">
           <input
             type="radio"
-            [checked]="provider.name == selectedStock"
+            [checked]="provider.name == selectedProvider"
             (change)="onCheck($event)"
             name="stockSelectorBtn"
             value="{{ provider.name }}"

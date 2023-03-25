@@ -15,6 +15,7 @@ import { SidebarComponent } from './core/components/sidebar/sidebar.component';
 import { OrderComponent } from './core/components/make-order/order.component';
 import { MakeOrderComponent } from './core/components/make-order/make-order.component';
 import { ProviderDetailsComponent } from './core/components/provider-details/provider-details.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { ProviderDetailsComponent } from './core/components/provider-details/pro
     
     BrowserModule,
     AppRoutingModule,
+    ReactiveFormsModule,
     AuthModule.forRoot({
       config: {
         authority: 'https://accounts.google.com',

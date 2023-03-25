@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Provider } from '../../models/provider.model';
 
 @Component({
   selector: 'app-provider-selector',
@@ -10,33 +11,12 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 })
 export class ProviderSelectorComponent {
   @Output() stockChanged = new EventEmitter<string>();
-  public provider_data = [
-    {
-      name: 'LMAX',
-      path: 'assets/product-images/amazon.png',
-    },
-    {
-      name: 'CURRENX',
-      path: 'assets/product-images/microsoft.png',
-    },
-    {
-      name: 'HOTSOTFX',
-      path: 'assets/product-images/oracle.png',
-    },
-    {
-      name: 'FXCM',
-      path: 'assets/product-images/tesla.png',
-    },
-    {
-      name: 'INTEGRALFX',
-      path: 'assets/product-images/ibm.png',
-    }
-  ];
+ @Input() provider_data!:Provider[];
 
-  @Input() selectedStock: string = 'LMAX';
+  @Input() selectedProvider: string = 'FXCM';
 
   onCheck(e: Event): void {
-    this.selectedStock = (e.target as HTMLInputElement).value;
-    this.stockChanged.emit(this.selectedStock);
+    this.selectedProvider = (e.target as HTMLInputElement).value;
+    this.stockChanged.emit(this.selectedProvider);
   }
 }

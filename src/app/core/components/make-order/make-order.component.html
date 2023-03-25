@@ -1,1 +1,42 @@
-<p>make-order works!</p>
+<div class="place-order">
+  <form
+    class="place-order-form"
+    (ngSubmit)="onSubmit()"
+    [formGroup]="makeOrderForm"
+  >
+    <h5 class="form-heading">Buy Currency</h5>
+    <fieldset class="stock-field">
+      <label for="currency">Currency</label>
+      <select id="currency" name="currency" formControlName="currency">
+        <option *ngFor="let currency of currencies" value="{{ currency }}">
+          {{ currency }}
+        </option>
+      </select>
+    </fieldset>
+
+    <fieldset class="quantity-field">
+      <label for="quantity">Amount</label>
+      <input
+        formControlName="amountBeingPurchased"
+        type="number"
+        id="quantity"
+        name="quantity"
+        min="0"
+        required
+      />
+    </fieldset>
+
+    <fieldset class="quantity-field">
+      <label for="accountNo">Bank Acc No</label>
+      <input
+        formControlName="bankAccountNo"
+        type="text"
+        id="accountNo"
+        name="accountNo"
+        required
+      />
+    </fieldset>
+
+    <button type="submit">Place Order</button>
+  </form>
+</div>
