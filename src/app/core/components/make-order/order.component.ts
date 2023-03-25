@@ -18,7 +18,10 @@ export class OrderComponent implements OnInit {
     {
       next:(data) => {
         this.orders = data;
-        console.log(this. orders)
+
+      },
+      error:(err )=> {
+        alert("You currently have no orders")
       }
     }
    )

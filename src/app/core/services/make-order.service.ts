@@ -15,7 +15,10 @@ export class MakeOrderService {
     this.http.post("http://localhost:8080/fx",request,{responseType:'text'}).subscribe(response => {
       if (response) {
         console.log(response);
-      }})
+        alert(response)
+      }}, (err) => {
+        alert(err.error)
+      })
     console.log("request has been made")
   }
 

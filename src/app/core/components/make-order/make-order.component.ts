@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { PurchaseRequest } from '../../models/purchaseRequest.model';
 import { MakeOrderService } from '../../services/make-order.service';
 
@@ -20,11 +20,11 @@ export class MakeOrderComponent implements OnInit{
     //it should be caps
 
     this.makeOrderForm = new FormGroup({
-      "currency":new FormControl(null),
-      "amountBeingPurchased":new FormControl(0.0),
+      "currency":new FormControl("NAIRA"),
+      "amountBeingPurchased":new FormControl(0.0,Validators.required),
       "requestTime": new FormControl(null),
       "status":new FormControl("PENDING"),
-      "bankAccountNo": new FormControl("")
+      "bankAccountNo": new FormControl("",Validators.required)
 
     });
 
